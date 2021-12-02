@@ -43,6 +43,20 @@ class DemoTest {
         // return
         assertEquals("0 0 S", result);
     }
+
+    @Test
+    void should_corrdinateY_change_to_1_when_move_given_command_M_and_direction_W() {
+        // given
+        MarsRover marsRover = new MarsRover(0, 0, 'W');
+        char command = 'M';
+
+        // when
+        String result = marsRover.executeCommand(command);
+
+        // return
+        assertEquals("0 0 W", result);
+    }
+
     @Test
     void should_direction_change_to__() {
 
