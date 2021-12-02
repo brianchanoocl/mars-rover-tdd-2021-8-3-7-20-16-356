@@ -113,7 +113,7 @@ class DemoTest {
     void should_direction_change_to_E_when_turn_given_command_R_and_direction_N() {
         // given
         MarsRover marsRover = new MarsRover(0, 0, 'N');
-        char command = 'L';
+        char command = 'R';
 
         // when
         String result = marsRover.executeCommand(command);
@@ -123,15 +123,28 @@ class DemoTest {
     }
 
     @Test
-    void should_direction_change_to_N_when_turn_given_command_R_and_direction_E() {
+    void should_direction_change_to_S_when_turn_given_command_R_and_direction_E() {
         // given
         MarsRover marsRover = new MarsRover(0, 0, 'E');
-        char command = 'L';
+        char command = 'R';
 
         // when
         String result = marsRover.executeCommand(command);
 
         // return
-        assertEquals("0 0 N", result);
+        assertEquals("0 0 S", result);
+    }
+
+    @Test
+    void should_direction_change_to_W_when_turn_given_command_R_and_direction_S() {
+        // given
+        MarsRover marsRover = new MarsRover(0, 0, 'S');
+        char command = 'R';
+
+        // when
+        String result = marsRover.executeCommand(command);
+
+        // return
+        assertEquals("0 0 W", result);
     }
 }
