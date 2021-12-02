@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class DemoTest {
 
     @Test
-    void should_corrdinateY_change_to_1_when_move_given_command_M_and_direction_N() {
+    void should_coordinateY_change_to_1_when_move_given_command_M_and_direction_N() {
         // given
         MarsRover marsRover = new MarsRover(0, 0, 'N');
         char command = 'M';
@@ -19,7 +19,7 @@ class DemoTest {
     }
 
     @Test
-    void should_corrdinateX_change_to_1_when_move_given_command_M_and_direction_E() {
+    void should_coordinateX_change_to_1_when_move_given_command_M_and_direction_E() {
         // given
         MarsRover marsRover = new MarsRover(0, 0, 'E');
         char command = 'M';
@@ -32,7 +32,7 @@ class DemoTest {
     }
 
     @Test
-    void should_corrdinateY_change_to_minus_1_when_move_given_command_M_and_direction_S() {
+    void should_coordinateY_change_to_minus_1_when_move_given_command_M_and_direction_S() {
         // given
         MarsRover marsRover = new MarsRover(0, 0, 'S');
         char command = 'M';
@@ -45,7 +45,7 @@ class DemoTest {
     }
 
     @Test
-    void should_corrdinateX_change_to_minus_1_when_move_given_command_M_and_direction_W() {
+    void should_coordinateX_change_to_minus_1_when_move_given_command_M_and_direction_W() {
         // given
         MarsRover marsRover = new MarsRover(0, 0, 'W');
         char command = 'M';
