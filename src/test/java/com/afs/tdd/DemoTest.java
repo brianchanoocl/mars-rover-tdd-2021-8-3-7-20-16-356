@@ -147,4 +147,17 @@ class DemoTest {
         // return
         assertEquals("0 0 W", result);
     }
+
+    @Test
+    void should_direction_change_to_N_when_turn_given_command_R_and_direction_w() {
+        // given
+        MarsRover marsRover = new MarsRover(0, 0, 'W');
+        char command = 'R';
+
+        // when
+        String result = marsRover.executeCommand(command);
+
+        // return
+        assertEquals("0 0 N", result);
+    }
 }
