@@ -15,11 +15,11 @@ class DemoTest {
         String result = marsRover.executeCommand(command);
 
         // return
-        assertEquals("0 0 N", result);
+        assertEquals("0 1 N", result);
     }
 
     @Test
-    void should_corrdinateY_change_to_1_when_move_given_command_M_and_direction_E() {
+    void should_corrdinateX_change_to_1_when_move_given_command_M_and_direction_E() {
         // given
         MarsRover marsRover = new MarsRover(0, 0, 'E');
         char command = 'M';
@@ -28,11 +28,11 @@ class DemoTest {
         String result = marsRover.executeCommand(command);
 
         // return
-        assertEquals("0 0 E", result);
+        assertEquals("1 0 E", result);
     }
 
     @Test
-    void should_corrdinateY_change_to_1_when_move_given_command_M_and_direction_S() {
+    void should_corrdinateY_change_to_minus_1_when_move_given_command_M_and_direction_S() {
         // given
         MarsRover marsRover = new MarsRover(0, 0, 'S');
         char command = 'M';
@@ -41,11 +41,11 @@ class DemoTest {
         String result = marsRover.executeCommand(command);
 
         // return
-        assertEquals("0 0 S", result);
+        assertEquals("0 -1 S", result);
     }
 
     @Test
-    void should_corrdinateY_change_to_1_when_move_given_command_M_and_direction_W() {
+    void should_corrdinateX_change_to_minus_1_when_move_given_command_M_and_direction_W() {
         // given
         MarsRover marsRover = new MarsRover(0, 0, 'W');
         char command = 'M';
@@ -54,7 +54,7 @@ class DemoTest {
         String result = marsRover.executeCommand(command);
 
         // return
-        assertEquals("0 0 W", result);
+        assertEquals("-1 0 W", result);
     }
 
     @Test
