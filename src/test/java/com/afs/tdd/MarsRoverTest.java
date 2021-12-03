@@ -165,10 +165,10 @@ class MarsRoverTest {
     void should_direction_change_to_N_and_coordinateX_change_to_1_and_coordinateY_change_to_1_when_move_and_turn_given_command_LMRM_and_direction_N() {
         // given
         MarsRover marsRover = new MarsRover(0, 0, 'N');
-        String command = "LMRM";
+        String commands = "LMRM";
 
         // when
-        String result = marsRover.executeCommand(command);
+        String result = marsRover.executeCommand(commands);
 
         // return
         assertEquals("1 1 N", result);
