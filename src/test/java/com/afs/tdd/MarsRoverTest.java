@@ -149,7 +149,7 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_direction_change_to_N_when_turn_given_command_R_and_direction_w() {
+    void should_direction_change_to_N_when_turn_given_command_R_and_direction_W() {
         // given
         MarsRover marsRover = new MarsRover(0, 0, 'W');
         char command = 'R';
@@ -159,5 +159,18 @@ class MarsRoverTest {
 
         // return
         assertEquals("0 0 N", result);
+    }
+
+    @Test
+    void should_direction_change_to_N_and_coordinateX_change_to_1_and_coordinateY_change_to_1_when_move_and_turn_given_command_LMRM_and_direction_N() {
+        // given
+        MarsRover marsRover = new MarsRover(0, 0, 'N');
+        String command = "LMRM";
+
+        // when
+        String result = marsRover.executeCommand(command);
+
+        // return
+        assertEquals("1 1 N", result);
     }
 }
