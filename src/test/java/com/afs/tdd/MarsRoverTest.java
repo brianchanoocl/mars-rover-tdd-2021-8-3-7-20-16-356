@@ -171,6 +171,6 @@ class MarsRoverTest {
         String result = marsRover.executeCommand(commands);
 
         // return
-        assertEquals("1 1 N", result);
+        assertEquals("-1 1 N", result);
     }
 }

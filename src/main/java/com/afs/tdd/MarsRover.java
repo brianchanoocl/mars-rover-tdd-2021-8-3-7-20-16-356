@@ -11,6 +11,17 @@ public class MarsRover {
         this.direction = direction;
     }
 
+    public String executeCommand(String commands){
+        for(char command : commands.toCharArray()){
+            if(command == 'M')
+                move();
+            else
+                turn(command);
+        }
+
+        return reportLocationStatus();
+    }
+
     public String executeCommand(char command){
         if(command == 'M')
             move();
